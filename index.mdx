@@ -1,97 +1,175 @@
 ---
 title: "Introduction"
-description: "Welcome to the new home for your documentation"
+description: "UltiTools-API — The Modern Spigot Plugin Framework"
+---
+
+## Welcome to UltiTools-API
+
+**UltiTools-API** is a modern framework for building Minecraft plugins on Spigot and Paper — inspired by Spring Boot–style development.
+
+Build Minecraft plugins the way you'd build a backend application:
+
+- Annotation-driven commands  
+- IoC container with dependency injection  
+- ORM-style data storage (MySQL / SQLite / JSON)  
+- Scheduled tasks without `BukkitRunnable` boilerplate  
+- Config validation & feature toggles  
+- AOP transactions and exception handling  
+
+Java 8+ compatible. Supports Minecraft 1.8 – 1.21.
+
 ---
 
 ## Setting up
 
-Get your documentation site up and running in minutes.
+Get your plugin up and running in minutes.
 
 <Card
-  title="Start here"
+  title="Quick Start"
   icon="rocket"
-  href="/quickstart"
+  href="/guide/quick-start"
   horizontal
 >
-  Follow our three step quickstart guide.
+  Create your first UltiTools-powered plugin in under 10 minutes.
 </Card>
 
-## Make it yours
+---
 
-Design a docs site that looks great and empowers your users.
+## Why UltiTools?
+
+Traditional Spigot development often means:
+
+- Manual `onCommand()` switch blocks  
+- Manual listener registration in `onEnable()`  
+- Static singletons for shared services  
+- Raw JDBC or file I/O  
+- Repetitive `new BukkitRunnable()` tasks  
+
+UltiTools eliminates boilerplate and lets you focus on business logic.
 
 <Columns cols={2}>
   <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
-  </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
+    title="Annotation-Driven Commands"
     icon="terminal"
-    href="/api-reference/introduction"
+    href="/guide/command-system"
   >
-    Auto-generate API documentation from OpenAPI specifications.
+    Map subcommands directly to methods with automatic parameter parsing and tab-completion.
+  </Card>
+
+  <Card
+    title="IoC & Dependency Injection"
+    icon="diagram-project"
+    href="/guide/ioc-container"
+  >
+    Use @Service and @Autowired to build modular, testable components.
+  </Card>
+
+  <Card
+    title="Data Storage & ORM"
+    icon="database"
+    href="/guide/data-storage"
+  >
+    Use @Table and @Column to persist entities across MySQL, SQLite, or JSON seamlessly.
+  </Card>
+
+  <Card
+    title="Scheduled Tasks"
+    icon="clock"
+    href="/guide/scheduler"
+  >
+    Declare scheduled methods with @Scheduled — no manual BukkitRunnable management.
   </Card>
 </Columns>
 
-## Create beautiful pages
+---
 
-Everything you need to create world-class documentation.
+## Core Capabilities
+
+Everything you need to build production-grade plugins.
 
 <Columns cols={2}>
   <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
+    title="Config Validation"
+    icon="sliders"
+    href="/guide/configuration"
   >
-    Use MDX to style your docs pages.
+    Validate config values with annotations like @Range, @NotEmpty, and @Size.
   </Card>
+
   <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
+    title="Feature Toggles"
+    icon="toggle-on"
+    href="/guide/conditional"
   >
-    Add sample code to demonstrate how to use your product.
+    Enable or disable entire components using @ConditionalOnConfig.
   </Card>
+
   <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
+    title="AOP Transactions"
+    icon="arrows-rotate"
+    href="/guide/aop"
   >
-    Display images and other media.
+    Use @Transactional and @ExceptionCatch without writing try/catch boilerplate.
   </Card>
+
   <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
+    title="GUI Framework"
+    icon="layer-group"
+    href="/guide/gui"
   >
-    Write once and reuse across your docs.
+    Build Inventory GUIs with pagination and declarative patterns.
   </Card>
 </Columns>
 
-## Need inspiration?
+---
+
+## Architecture Overview
+
+UltiTools includes:
+
+- **Command System** — Annotation-based command mapping  
+- **Event System** — Auto-discovered listeners  
+- **IoC Container** — Three-level cache with circular dependency resolution  
+- **Query DSL** — Fluent query builder for all supported data stores  
+- **AOP Proxy System** — CGLIB-based runtime interception  
+- **Hot Module Loading** — Load/unload modules without restarting the server  
+- **WebSocket + UltiPanel** — Remote server management  
+
+---
+
+## Requirements
+
+- **Java**: 8 or higher  
+- **Minecraft**: 1.8 – 1.21 (Spigot / Paper)  
+- **UltiTools Plugin**: Installed on your server  
+
+---
+
+## Ready to Start?
 
 <Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
+  title="Start Building with UltiTools"
+  icon="bolt"
+  href="/guide/introduction"
 >
-  Browse our showcase of exceptional documentation sites.
+  Learn the core concepts and architecture before writing your first module.
 </Card>
+
+<Card
+  title="API Reference"
+  icon="book"
+  href="/api-reference/introduction"
+>
+  Browse annotations, interfaces, and framework APIs.
+</Card>
+
+---
+
+## Community & Resources
+
+- Developer Documentation  
+- Project Wiki  
+- Architecture Guide  
+- Discord & Community Support  
+
+UltiTools is open-source and MIT licensed. Contributions are welcome.
